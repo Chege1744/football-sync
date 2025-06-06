@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FootballSync</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">FootballSync</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#join">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to FootballSync</h1>
+      <p class="hero-tagline">Master Your Game. Train Smarter. Play Harder.</p>
+      <div class="hero-highlights">
+        <span class="badge">⚽ Pro-Level Drills</span>
+        <span class="badge">🥗 Athlete Nutrition</span>
+        <span class="badge">🎯 Tactical Playbooks</span>
+      </div>
+      <a href="#training" class="btn">Start Training</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About FootballSync</h2>
+    <p class="section-intro">We empower footballers with elite training, nutrition, and tactical knowledge, built for the next generation of champions.</p>
+    <div class="about-cards">
+      <div class="about-card">
+        <i class="fas fa-dumbbell"></i>
+        <h3>Elite Training</h3>
+        <p>Drills designed by top coaches to boost your fitness, strength, and form.</p>
+      </div>
+      <div class="about-card">
+        <i class="fas fa-utensils"></i>
+        <h3>Match Nutrition</h3>
+        <p>Plans that fuel performance and speed up recovery before and after matches.</p>
+      </div>
+      <div class="about-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Smart Gear</h3>
+        <p>Get gear reviews and insights so you're always game-ready.</p>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="about-testimonials">
+      <h3>What Players Say</h3>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <img src="https://i.pravatar.cc/100?u=malik" alt="Malik" />
+          <blockquote>"FootballSync helped me train smarter—not just harder."</blockquote>
+          <div class="stars">★★★★★</div>
+          <p>- Malik, 18</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://i.pravatar.cc/100?u=leila" alt="Leila" />
+          <blockquote>"The nutrition advice improved my game day energy."</blockquote>
+          <div class="stars">★★★★☆</div>
+          <p>- Leila, 21</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://i.pravatar.cc/100?u=noah" alt="Noah" />
+          <blockquote>"I crushed my tryout thanks to these drills."</blockquote>
+          <div class="stars">★★★★★</div>
+          <p>- Noah, 17</p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="about-prev">⟨</button>
+        <button class="slider-btn" id="about-next">⟩</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training -->
+  <section id="training" class="training-section">
+    <h2>Training Programs</h2>
+    <p class="section-intro">Structured and skill-focused. Perfect for beginners and future pros alike.</p>
+    <div class="training-grid">
+      <div class="training-card" onclick="viewProgram('foundation')">
+        <div class="card-front">
+          <h3>Foundation Drills</h3>
+          <p>Master ball control, footwork, and accuracy.</p>
+        </div>
+        <div class="card-back">
+          <p>Includes dribble cones, tight-space turns, and passing ladders.</p>
+        </div>
+      </div>
+      <div class="training-card" onclick="viewProgram('tactics')">
+        <div class="card-front">
+          <h3>Tactical Mastery</h3>
+          <p>Upgrade your positioning, IQ, and awareness.</p>
+        </div>
+        <div class="card-back">
+          <p>Includes 4-4-2 breakdowns, pressing zones, and role rotations.</p>
+        </div>
+      </div>
+      <div class="training-card" onclick="viewProgram('agility')">
+        <div class="card-front">
+          <h3>Speed & Agility</h3>
+          <p>Become quicker, more explosive, and agile.</p>
+        </div>
+        <div class="card-back">
+          <p>Includes sprint ladders, cone cuts, and acceleration drills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" class="resources-section">
+    <h2>Player Resources</h2>
+    <p class="section-intro">Unlock tools and content to train smarter, recover faster, and dominate matches.</p>
+    <div class="resources-grid">
+      <div class="resource-card expandable">
+        <h3><i class="fas fa-video"></i> Video Tutorials</h3>
+        <p>Watch and train with guided technique videos.</p>
+        <button onclick="toggleExpand(this)">Learn More</button>
+        <div class="extra-content">
+          <p>Includes finishing, dribbling, and 1v1 breakdowns with slow-motion replays.</p>
+        </div>
+      </div>
+      <div class="resource-card expandable">
+        <h3><i class="fas fa-brain"></i> Mental Toughness</h3>
+        <p>Master focus, discipline, and competitive mindset.</p>
+        <button onclick="toggleExpand(this)">Learn More</button>
+        <div class="extra-content">
+          <p>Mindset training, pressure handling, and game-day prep meditations included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Section -->
+  <section id="join" class="join-us-section">
+    <h2>Why Join FootballSync?</h2>
+    <p class="section-intro">
+      Join a community of committed footballers pushing limits together. Whether you're preparing for trials or building fitness, we’re here to guide you.
+    </p>
+    <ul class="join-benefits">
+      <li>✅ Personalized progress tracking</li>
+      <li>✅ Pro-level training content</li>
+      <li>✅ Mentorship and team support</li>
+      <li>✅ Opportunities to get scouted</li>
+    </ul>
+    <button class="btn register-btn" onclick="openRegistration()">Register to Join</button>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Got a question or idea? We’d love to hear from you.</p>
+    <form class="contact-form">
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Registration Modal -->
+  <div id="register-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeRegistration()">×</span>
+      <h3>Join FootballSync</h3>
+      <p class="subtext">Tell us about yourself and your football journey.</p>
+      <form id="registration-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="number" name="age" placeholder="Age" required />
+        <input type="text" name="position" placeholder="Preferred Position" required />
+        <select name="level" required>
+          <option value="">Current Level</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+        <textarea name="goals" rows="4" placeholder="What are your football goals?" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="registration-success" class="hidden success-message">
+        <p>✅ Thanks for registering! We'll message you shortly.</p>
+      </div>
+      <div id="already-registered" class="hidden error-message">
+        <p>⚠️ You've already registered. We'll be in touch soon!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Training Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 FootballSync. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
