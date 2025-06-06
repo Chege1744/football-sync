@@ -1,0 +1,2 @@
+# football.sync
+football guide
